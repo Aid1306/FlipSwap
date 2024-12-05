@@ -1,0 +1,370 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body content */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  flex-grow: 1;
+  background: url('https://imgur.com/GbcFIan.jpg') no-repeat center top; /* Add image as background */
+  background-size: cover; /* Maintain image dimensions without stretching */
+  background-attachment: fixed; /* Keep image fixed while scrolling */
+}
+
+/* styles.css */
+
+/* Define the class for the Kavoon font */
+.kavoon-regular {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  text-transform: uppercase;
+  background: linear-gradient(
+  90deg,
+  #cfe8f5, /* Very Light Blue */
+  #d9f0f5, /* Pale Sky Blue */
+  #ffffff,  /* White */
+  #f0f9fc  /* Lightest Pastel Blue */
+);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* General Header Styling */
+.small-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #C6E7FF;
+  position: relative; /* Ensure absolute positioning for child elements works */
+  z-index: 10;
+}
+
+/* Logo Styling */
+.small-header .logo {
+  height: 40px; /* Adjust logo size */
+  width: auto;
+  display: block;
+}
+
+/* Menu Styling */
+.small-header .menu {
+  display: none; /* Hidden by default for mobile */
+}
+
+.small-header .menu a {
+  text-decoration: none;
+  color: #80C4E9;
+  font-size: 1rem;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.small-header .menu a:hover {
+  color: #f4f4f4;
+}
+
+/* Burger Menu Styling */
+.small-header .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.small-header .burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Menu Visibility for Mobile */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px; /* Below the header */
+  right: 20px;
+  background: rgba(106, 17, 203, 0.9); /* Semi-transparent for better visibility */
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+/* Desktop View: Show Menu */
+@media (min-width: 768px) {
+  .small-header .menu {
+    display: flex; /* Show the menu */
+    gap: 20px;
+  }
+
+  .small-header .burger {
+    display: none; /* Hide burger on desktop */
+  }
+}
+/* Show the menu when burger is clicked in mobile */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #C9E6F0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Prevent overlapping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('https://i.imgur.com/BbTLKMl.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.small-header .menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #C9E6F0;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 100; /* Ensure it is above other elements */
+}
+
+.small-header .burger {
+  z-index: 101; /* Ensure it's clickable above the background */
+}
+.main-header {
+  font-size: 4rem;
+  color: #fff;
+  display: inline-block;
+  animation: flipAnimation 3s infinite;
+}
+
+@keyframes flipAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+/* CTA Section */
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: url('https://imgur.com/RoHBjVg.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire container */
+}
+
+.cta-box {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+.cta-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #80C4E9;
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  color: #C9E6F0;
+}
+
+/* Carousel and Sidebar */
+.carousel-sidebar-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carousel-container {
+  flex: 3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 250px;
+  background-size: cover; /* Ensures the image covers the entire slide */
+  background-position: center; /* Centers the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Slide 1 background */
+.slide:nth-child(1) {
+  background-image: url('https://imgur.com/6zd7ALg.jpg'); 
+}
+
+/* Slide 2 background */
+.slide:nth-child(2) {
+  background-image: url('https://imgur.com/iVvX30L.jpg'); 
+}
+
+/* Slide 3 background */
+.slide:nth-child(3) {
+  background-image: url('https://imgur.com/PHKWQIp.jpg'); 
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #80C4E9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background: #D4EBF8;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background: url('https://imgur.com/kPaPKUv.jpg') no-repeat center center; /* Set image as background */
+  background-size: cover; /* Ensure the image covers the sidebar */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Box */
+.description {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  color : #80C4E9;
+}
+
+.description-box {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 11px;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Flip Cards */
+.card-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.flip-card {
+  flex: 1 0 100%;
+  max-width: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-back {
+  background-color: #C9E6F0;
+  transform: rotateY(180deg);
+}
+
+/* Specific backgrounds for each card */
+.flip-card:nth-child(1) .flip-card-front {
+  background-image: url('https://imgur.com/5g7YtPR.jpg');
+}
+
+.flip-card:nth-child(2) .flip-card-front {
+  background-image: url('https://imgur.com/5g7YtPR.jpg');
+}
+
+.flip-card:nth-child(3) .flip-card-front {
+  background-image: url('https://imgur.com/5g7YtPR.jpg');
+}
+
+/* Footer Background */
+footer {
+  background-color: #7BD3EA;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

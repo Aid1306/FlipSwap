@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Temperature.css">
+</head>
+<body>
+  
+  <!-- Small Header with Burger Menu for Mobile -->
+  <div class="small-header">
+    <img src="https://i.imgur.com/Iu7IC95.jpg" alt="FlipSwap Logo" class="logo">
+    <nav class="menu">
+      <a href="/New.html">Home</a>
+      <a href="/About.Html">About</a>
+      <a href="/Feature.html">Feature</a>
+    </nav>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <h1 class="main-header">
+      <span class="kavoon-regular">Temperature</span>
+      <span class="kavoon-regular">Converter</span>
+    </h1>
+  </header>
+
+  <!-- Temperature Converter Section -->
+  <section class="converter-section">
+    <div class="converter-box">
+      <h2>Convert Temperature</h2>
+      <div class="input-group">
+        <input type="number" id="inputTemperature" placeholder="Enter Temperature" oninput="convertTemperature()">
+        <select id="unitFrom" onchange="convertTemperature()">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+      </div>
+   
+      <div class="output-group">
+        <input type="text" id="outputTemperature" readonly placeholder="Converted Temperature" />
+        <select id="unitTo" onchange="convertTemperature()">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 FlipSwap. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="Temperature.js"></script>
+</body>
+</html>

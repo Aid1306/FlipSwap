@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlipSwap</title>
+  
+  <!-- Add the link to the Google Fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="New.css">
+</head>
+<body>
+  
+<!-- Small Header -->
+<div class="small-header">
+  <!-- Logo -->
+  <img src="https://i.imgur.com/Iu7IC95.jpg" alt="FlipSwap Logo" class="logo">
+
+  <!-- Navigation Menu -->
+  <nav class="menu">
+    <a href="/New.html">Home</a>
+    <a href="/About.Html">About</a>
+    <a href="/Feature.html">Feature</a>
+  </nav>
+
+  <!-- Burger Menu -->
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+  <!-- Header Section -->
+  <header>
+    <h1 class="main-header">
+      <span class="kavoon-regular flip-word">Flip</span>
+      <span class="kavoon-regular swap-word">Swap</span>
+    </h1>
+  </header>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="cta-box">
+      <h2>CONVERTER</h2>
+      <p>Start FlipSwap</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Carousel and Sidebar -->
+    <div class="carousel-sidebar-container">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+        <div class="carousel-dots">
+          <span data-slide="0" class="dot active"></span>
+          <span data-slide="1" class="dot"></span>
+          <span data-slide="2" class="dot"></span>
+        </div>
+      </div>
+      <aside class="sidebar">
+      </aside>
+    </div>
+
+    <!-- Description Box -->
+    <section class="description">
+      <div class="description-box">
+        <p>Select a card to flip and start converting values such as temperature, number systems, and time. Simply pick your option and let the conversion happen effortlessly!</p>
+      </div>
+    </section>
+
+<!-- Flip Cards Section -->
+<section class="flip-card-section">
+  <div class="card-wrapper">
+    <div class="flip-card" onclick="handleCardClick(this, '/Temperature.html')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Temperature</div>
+        <div class="flip-card-back">Open</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="handleCardClick(this, '/Time.html')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Time</div>
+        <div class="flip-card-back">Open</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="handleCardClick(this, '/Number.html')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Number System</div>
+        <div class="flip-card-back">Open</div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 FlipSwap. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="New.js"></script>
+</body>
+</html>

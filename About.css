@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body content */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://imgur.com/kKO4ave.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Small Header (Fixed on top) */
+.small-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #C6E7FF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow to separate from page content */
+}
+
+/* Small Logo Styling */
+.small-header .logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu Styling */
+.small-header .menu {
+  display: none;
+}
+
+.small-header .menu a {
+  text-decoration: none;
+  color: #80C4E9;
+  font-size: 1rem;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.small-header .menu a:hover {
+  color: #f4f4f4;
+}
+
+/* Burger Menu Styling */
+.small-header .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.small-header .burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Menu Visibility */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #C6E7FF;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+/* Desktop View: Show Menu */
+@media (min-width: 768px) {
+  .small-header .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .small-header .burger {
+    display: none;
+  }
+}
+
+/* Main Large Header with Centered Logo */
+.main-header {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url('https://i.imgur.com/BbTLKMl.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px; /* Space for fixed header */
+  color: white;
+  position: relative;
+}
+
+.main-header .main-logo {
+  width: 200px; /* Adjust size of the main logo */
+  height: auto;
+}
+
+.main-header h1 {
+  font-size: 3rem;
+  color: white;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Scrollable Transparent Box */
+.scrollable-box {
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent box */
+  margin-top: -40px; /* Slight overlap with header */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.content-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #7BD3EA;
+}
+
+.content-box p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #7BD3EA;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

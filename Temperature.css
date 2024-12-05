@@ -1,0 +1,296 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://imgur.com/6m8XCur.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Small Header */
+.small-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #FFCCE1;
+  position: relative;
+}
+
+.small-header .logo {
+  height: 40px;
+}
+
+.small-header .menu {
+  display: none;
+}
+
+.small-header .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.small-header .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.small-header .burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('https://imgur.com/XwXVBrO.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  font-size: 4rem;
+  color: #fff;
+}
+
+/* Converter Section */
+.converter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.converter-box {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for a modern look */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Optional modern glass effect */
+}
+
+.converter-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #FFCCE1;
+  font-weight: bold;
+}
+
+.input-group,
+.output-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input-group input,
+.output-group input {
+  width: 100%;
+  max-width: 250px; /* Increased width to prevent cutting off text */
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.output-group input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 10px rgba(0, 120, 212, 0.3);
+}
+
+.select-group select {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 180px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.select-group select:focus {
+  border-color: #0078d4;
+  background-color: #e3f2fd;
+}
+
+.to-label {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+button {
+  background-color: #0078d4;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 250px; /* Ensuring the button is not too wide */
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button:active {
+  background-color: #004080;
+}
+
+/* Footer */
+footer {
+  background: #FF9BD2;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Mobile Screens (Max-width 767px) */
+@media (max-width: 767px) {
+  header {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .main-header {
+    font-size: 2.5rem;
+  }
+
+  .converter-section {
+    padding: 10px;
+  }
+
+  .converter-box {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .input-group input,
+  .output-group input,
+  .select-group select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .to-label {
+    display: none;
+  }
+
+  .small-header .menu.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /* Ensure burger menu is visible on mobile screens */
+  .small-header .menu {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #FFCCE1;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+/* Tablet Screens (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 80vh;
+    padding: 40px;
+  }
+
+  .main-header {
+    font-size: 3.5rem;
+  }
+
+  .converter-section {
+    padding: 20px;
+  }
+
+  .converter-box {
+    padding: 15px;
+    width: 80%;
+  }
+
+  .input-group input,
+  .output-group input,
+  .select-group select {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .to-label {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+
+  /* Hide burger on tablet screens */
+  .small-header .burger {
+    display: none;
+  }
+
+  .small-header .menu {
+    display: flex;
+  }
+}
+
+/* Desktop Screens (Min-width 1024px) */
+@media (min-width: 1024px) {
+  /* Ensure burger is hidden on desktop */
+  .small-header .burger {
+    display: none;
+  }
+
+  /* Desktop Menu is visible */
+  .small-header .menu {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    position: relative;
+    background: none;
+    padding: 0;
+  }
+}
