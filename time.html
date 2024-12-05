@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Converter</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="time.css">
+</head>
+<body>
+  
+  <!-- Small Header -->
+  <div class="small-header">
+    <img src="https://i.imgur.com/Iu7IC95.jpg" alt="FlipSwap Logo" class="logo">
+    <nav class="menu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/feature.html">Feature</a>
+    </nav>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <h1 class="main-header">
+      <span class="kavoon-regular">Time</span>
+      <span class="kavoon-regular">Converter</span>
+    </h1>
+  </header>
+
+  <!-- Time Converter Section -->
+  <section class="converter-section">
+    <div class="converter-box">
+      <h2>Convert Time</h2>
+      <div class="input-group">
+        <input type="number" id="inputTime" placeholder="Enter Time" oninput="convertTime()">
+        <select id="unitFrom" onchange="convertTime()">
+          <option value="seconds">Seconds</option>
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+        </select>
+      </div>
+   
+      <div class="output-group">
+        <input type="text" id="outputTime" readonly placeholder="Converted Time" />
+        <select id="unitTo" onchange="convertTime()">
+          <option value="seconds">Seconds</option>
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2024 FlipSwap. All rights reserved.</p>
+  </footer>
+
+  
+  <script src="time.js"></script>
+</body>
+</html>

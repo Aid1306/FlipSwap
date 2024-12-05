@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number System Converter</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="number.css">
+</head>
+<body>
+  
+  <!-- Small Header -->
+  <div class="small-header">
+    <img src="https://i.imgur.com/Iu7IC95.jpg" alt="FlipSwap Logo" class="logo">
+    <nav class="menu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/feature.html">Feature</a>
+    </nav>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <h1 class="main-header">
+      <span class="kavoon-regular">Number System</span>
+      <span class="kavoon-regular">Converter</span>
+    </h1>
+  </header>
+
+  <!-- Number System Converter Section -->
+  <section class="converter-section">
+    <div class="converter-box">
+      <h2>Convert Number System</h2>
+      <div class="input-group">
+        <input type="number" id="inputNumber" placeholder="Enter Number" oninput="convertNumber()">
+        <select id="fromBase" onchange="convertNumber()">
+          <option value="2">Binary</option>
+          <option value="10">Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+      </div>
+   
+      <div class="output-group">
+        <input type="text" id="outputNumber" readonly placeholder="Converted Number" />
+        <select id="toBase" onchange="convertNumber()">
+          <option value="2">Binary</option>
+          <option value="10">Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Number System Guide Table Section -->
+  <section class="number-guide-section">
+    <h2>Number System Guide</h2>
+    <div class="table-container">
+      <table class="number-guide-table">
+        <thead>
+          <tr>
+            <th>Decimal</th>
+            <th>Binary</th>
+            <th>Hexadecimal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>10</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>11</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>100</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>101</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>110</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>111</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>1000</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>1001</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>1010</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>1011</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>1100</td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>1101</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>1110</td>
+            <td>E</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>1111</td>
+            <td>F</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2024 FlipSwap. All rights reserved.</p>
+  </footer>
+
+  
+  <script src="number.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.small-header .menu');
+      menu.classList.toggle('active');
+    }
+
+    function convertNumber() {
+      const inputNumber = document.getElementById('inputNumber').value;
+      const fromBase = document.getElementById('fromBase').value;
+      const toBase = document.getElementById('toBase').value;
+      let outputNumber;
+
+      if (inputNumber === '') {
+        outputNumber = '';
+      } else {
+        // Convert inputNumber to decimal first
+        const decimal = parseInt(inputNumber, fromBase);
+
+        if (isNaN(decimal)) {
+          outputNumber = 'Invalid Number';
+        } else {
+          // Convert from decimal to the target base
+          if (toBase == 2) {
+            outputNumber = decimal.toString(2);
+          } else if (toBase == 10) {
+            outputNumber = decimal.toString(10);
+          } else if (toBase == 16) {
+            outputNumber = decimal.toString(16).toUpperCase();
+          }
+        }
+      }
+
+      document.getElementById('outputNumber').value = outputNumber;
+    }
+  </script>
+</body>
+</html>
