@@ -367,3 +367,25 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+/* Laptop View: Specific Styling */
+@media (min-width: 1024px) {
+  .small-header {
+    padding: 20px 40px; /* Increase header padding for larger screens */
+  }
+
+  .cta {
+    padding: 60px 40px; /* More padding for the call-to-action section */
+  }
+
+  .description-box {
+    max-width: 900px; /* Increase max width for the description box */
+  }
+
+  .card-wrapper {
+    gap: 40px; /* Wider spacing between cards */
+  }
+
+  .flip-card {
+    max-width: 400px; /* Increase card size for better visibility */
+  }
+  }
