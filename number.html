@@ -18,9 +18,9 @@
   <div class="small-header">
     <img src="https://i.imgur.com/Iu7IC95.jpg" alt="FlipSwap Logo" class="logo">
     <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="feature.html">Feature</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/feature.html">Feature</a>
     </nav>
     <div class="burger" onclick="toggleMenu()">
       <div></div>
@@ -38,128 +38,47 @@
   </header>
 
   <!-- Number System Converter Section -->
-  <section class="converter-section">
-    <div class="converter-box">
-      <h2>Convert Number System</h2>
-      <div class="input-group">
-        <input type="number" id="inputNumber" placeholder="Enter Number" oninput="convertNumber()">
-        <select id="fromBase" onchange="convertNumber()">
-          <option value="2">Binary</option>
-          <option value="10">Decimal</option>
-          <option value="16">Hexadecimal</option>
-        </select>
-      </div>
-   
-      <div class="output-group">
-        <input type="text" id="outputNumber" readonly placeholder="Converted Number" />
-        <select id="toBase" onchange="convertNumber()">
-          <option value="2">Binary</option>
-          <option value="10">Decimal</option>
-          <option value="16">Hexadecimal</option>
-        </select>
-      </div>
+<section class="converter-section">
+  <div class="converter-box">
+    <h2>Convert Number System</h2>
+    <div class="input-group">
+      <label for="decimalInput">Decimal</label>
+      <input type="text" id="decimalInput" placeholder="Enter Decimal" oninput="updateValues('decimal')">
     </div>
-  </section>
-
-  <!-- Number System Guide Table Section -->
-  <section class="number-guide-section">
-    <h2>Number System Guide</h2>
-    <div class="table-container">
-      <table class="number-guide-table">
-        <thead>
-          <tr>
-            <th>Decimal</th>
-            <th>Binary</th>
-            <th>Hexadecimal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>10</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>11</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>100</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>101</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>110</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>111</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>1000</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>1001</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>1010</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>1011</td>
-            <td>B</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>1100</td>
-            <td>C</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>1101</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td>1110</td>
-            <td>E</td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td>1111</td>
-            <td>F</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="input-group">
+      <label for="binaryInput">Binary</label>
+      <input type="text" id="binaryInput" placeholder="Enter Binary" oninput="updateValues('binary')">
     </div>
-  </section>
+    <div class="input-group">
+      <label for="hexInput">Hexadecimal</label>
+      <input type="text" id="hexInput" placeholder="Enter Hexadecimal" oninput="updateValues('hex')">
+    </div>
+    <div class="input-group">
+      <label for="octalInput">Octal</label>
+      <input type="text" id="octalInput" placeholder="Enter Octal" oninput="updateValues('octal')">
+    </div>
+  </div>
+</section>
 
-  
+<section class="number-guide-section">
+  <h2>Number System Guide</h2>
+  <div class="table-container">
+    <table class="number-guide-table">
+      <thead>
+        <tr>
+          <th>Decimal</th>
+          <th>Binary</th>
+          <th>Octal</th>
+          <th>Hexadecimal</th>
+        </tr>
+      </thead>
+      <tbody id="guideTableBody">
+        <!-- Rows will be dynamically generated using JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
   <footer>
     <p>© 2024 FlipSwap. All rights reserved.</p>
   </footer>
@@ -202,4 +121,4 @@
     }
   </script>
 </body>
-</html>
+  </html>
