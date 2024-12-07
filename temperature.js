@@ -4,44 +4,48 @@ function toggleMenu() {
   menu.classList.toggle('active');
 }
 
-// Temperature Conversion Function
-function convertTemperature() {
-  const inputTemp = parseFloat(document.getElementById('inputTemperature').value);
-  const unitFrom = document.getElementById('unitFrom').value;
-  const unitTo = document.getElementById('unitTo').value;
+// Conversion from Celsius
+function convertFromCelsius() {
+  const celsius = parseFloat(document.getElementById('celsiusBox').value);
 
-  let outputTemp;
-
-  if (isNaN(inputTemp)) {
-    document.getElementById('outputTemperature').value = "";
+  if (isNaN(celsius)) {
+    clearAll();
     return;
   }
 
-  if (unitFrom === "celsius") {
-    if (unitTo === "fahrenheit") {
-      outputTemp = (inputTemp * 9/5) + 32;
-    } else if (unitTo === "kelvin") {
-      outputTemp = inputTemp + 273.15;
-    } else {
-      outputTemp = inputTemp;
-    }
-  } else if (unitFrom === "fahrenheit") {
-    if (unitTo === "celsius") {
-      outputTemp = (inputTemp - 32) * 5/9;
-    } else if (unitTo === "kelvin") {
-      outputTemp = (inputTemp - 32) * 5/9 + 273.15;
-    } else {
-      outputTemp = inputTemp;
-    }
-  } else if (unitFrom === "kelvin") {
-    if (unitTo === "celsius") {
-      outputTemp = inputTemp - 273.15;
-    } else if (unitTo === "fahrenheit") {
-      outputTemp = (inputTemp - 273.15) * 9/5 + 32;
-    } else {
-      outputTemp = inputTemp;
-    }
+  document.getElementById('fahrenheitBox').value = (celsius * 9 / 5) + 32; // Celsius to Fahrenheit
+  document.getElementById('kelvinBox').value = celsius + 273.15;          // Celsius to Kelvin
+}
+
+// Conversion from Fahrenheit
+function convertFromFahrenheit() {
+  const fahrenheit = parseFloat(document.getElementById('fahrenheitBox').value);
+
+  if (isNaN(fahrenheit)) {
+    clearAll();
+    return;
   }
 
-  document.getElementById('outputTemperature').value = outputTemp.toFixed(2);
+  document.getElementById('celsiusBox').value = (fahrenheit - 32) * 5 / 9; // Fahrenheit to Celsius
+  document.getElementById('kelvinBox').value = ((fahrenheit - 32) * 5 / 9) + 273.15; // Fahrenheit to Kelvin
 }
+
+// Conversion from Kelvin
+function convertFromKelvin() {
+  const kelvin = parseFloat(document.getElementById('kelvinBox').value);
+
+  if (isNaN(kelvin)) {
+    clearAll();
+    return;
+  }
+
+  document.getElementById('celsiusBox').value = kelvin - 273.15;           // Kelvin to Celsius
+  document.getElementById('fahrenheitBox').value = (kelvin - 273.15) * 9 / 5 + 32; // Kelvin to Fahrenheit
+}
+
+// Clear all fields
+function clearAll() {
+  document.getElementById('celsiusBox').value = "";
+  document.getElementById('fahrenheitBox').value = "";
+  document.getElementById('kelvinBox').value = "";
+                          }
