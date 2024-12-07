@@ -38,29 +38,29 @@
   </header>
 
   <!-- Temperature Converter Section -->
-  <section class="converter-section">
-    <div class="converter-box">
-      <h2>Convert Temperature</h2>
-      <div class="input-group">
-        <input type="number" id="inputTemperature" placeholder="Enter Temperature" oninput="convertTemperature()">
-        <select id="unitFrom" onchange="convertTemperature()">
-          <option value="celsius">Celsius</option>
-          <option value="fahrenheit">Fahrenheit</option>
-          <option value="kelvin">Kelvin</option>
-        </select>
-      </div>
-   
-      <div class="output-group">
-        <input type="text" id="outputTemperature" readonly placeholder="Converted Temperature" />
-        <select id="unitTo" onchange="convertTemperature()">
-          <option value="celsius">Celsius</option>
-          <option value="fahrenheit">Fahrenheit</option>
-          <option value="kelvin">Kelvin</option>
-        </select>
-      </div>
-    </div>
-  </section>
+<section class="converter-section">
+  <div class="converter-box">
+    <h2>Temperature Converter</h2>
 
+    <!-- Celsius Input -->
+    <div class="input-group">
+      <label for="celsiusBox">Celsius</label>
+      <input type="number" id="celsiusBox" placeholder="Enter Celsius" oninput="convertFromCelsius()">
+    </div>
+
+    <!-- Fahrenheit Input -->
+    <div class="input-group">
+      <label for="fahrenheitBox">Fahrenheit</label>
+      <input type="number" id="fahrenheitBox" placeholder="Enter Fahrenheit" oninput="convertFromFahrenheit()">
+    </div>
+
+    <!-- Kelvin Input -->
+    <div class="input-group">
+      <label for="kelvinBox">Kelvin</label>
+      <input type="number" id="kelvinBox" placeholder="Enter Kelvin" oninput="convertFromKelvin()">
+    </div>
+  </div>
+</section>
   
   <footer>
     <p>© 2024 FlipSwap. All rights reserved.</p>
@@ -69,4 +69,4 @@
   
   <script src="temperature.js"></script>
 </body>
-</html>
+  </html>
