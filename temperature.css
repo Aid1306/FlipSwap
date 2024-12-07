@@ -74,6 +74,7 @@ header {
 }
 
 /* Converter Section */
+/* Updated CSS for Converter Section */
 .converter-section {
   display: flex;
   justify-content: center;
@@ -99,18 +100,21 @@ header {
   font-weight: bold;
 }
 
-.input-group,
-.output-group {
+.input-group {
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column; /* Ensure label and input stack vertically */
+  align-items: flex-start; /* Align text to the left */
+  gap: 8px; /* Add spacing between label and input */
 }
 
-.input-group input,
-.output-group input {
+.input-group label {
+  font-size: 1.2rem; /* Adjust label font size */
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
   width: 100%;
   max-width: 250px; 
   padding: 12px;
@@ -120,56 +124,9 @@ header {
   transition: all 0.3s ease;
 }
 
-.input-group input:focus,
-.output-group input:focus {
+.input-group input:focus {
   border-color: #0078d4;
   box-shadow: 0 0 10px rgba(0, 120, 212, 0.3);
-}
-
-.select-group select {
-  padding: 12px;
-  font-size: 1.1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 180px;
-  background-color: #f5f5f5;
-  transition: all 0.3s ease;
-}
-
-.select-group select:focus {
-  border-color: #0078d4;
-  background-color: #e3f2fd;
-}
-
-.to-label {
-  font-size: 1.8rem;
-  color: #333;
-  font-weight: bold;
-  margin: 0 10px;
-  display: inline-block;
-}
-
-button {
-  background-color: #0078d4;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  max-width: 250px; 
-  margin-top: 20px;
-}
-
-button:hover {
-  background-color: #005fa3;
-}
-
-button:active {
-  background-color: #004080;
 }
 
 /* Footer */
@@ -292,4 +249,4 @@ footer {
     background: none;
     padding: 0;
   }
-}
+  }
