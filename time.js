@@ -1,4 +1,4 @@
-// User-defined function to parse a string to a float
+
 function customParseFloat(value) {
   let num = 0, isDecimal = false, decimalFactor = 0.1;
   for (let i = 0; i < value.length; i++) {
@@ -19,18 +19,18 @@ function customParseFloat(value) {
   return num;
 }
 
-// User-defined function to check if a value is NaN
+
 function customIsNaN(value) {
-  return value !== value; // NaN is the only value in JavaScript not equal to itself
+  return value !== value; 
 }
 
-// User-defined function to round a number to 2 decimal places
+
 function customToFixed(value, decimals) {
   const multiplier = Math.pow(10, decimals);
   return Math.round(value * multiplier) / multiplier;
 }
 
-// Convert from seconds and update minutes and hours
+
 function convertFromSeconds() {
   const seconds = customParseFloat(document.getElementById('secondsInput').value);
 
@@ -46,7 +46,7 @@ function convertFromSeconds() {
   document.getElementById('hoursInput').value = hours;
 }
 
-// Convert from minutes and update seconds and hours
+
 function convertFromMinutes() {
   const minutes = customParseFloat(document.getElementById('minutesInput').value);
 
@@ -62,7 +62,7 @@ function convertFromMinutes() {
   document.getElementById('hoursInput').value = hours;
 }
 
-// Convert from hours and update seconds and minutes
+
 function convertFromHours() {
   const hours = customParseFloat(document.getElementById('hoursInput').value);
 
@@ -78,13 +78,13 @@ function convertFromHours() {
   document.getElementById('minutesInput').value = minutes;
 }
 
-// Reset all inputs
+
 function resetInputs() {
   document.getElementById('secondsInput').value = '';
   document.getElementById('minutesInput').value = '';
   document.getElementById('hoursInput').value = '';
 }
-// Menu toggle function remains as is
+
 function toggleMenu() {
   const menu = document.querySelector('.menu');
   menu.classList.toggle('active');
