@@ -1,11 +1,11 @@
-/*General*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body content */
+
 body {
   margin: 0;
   padding: 0;
@@ -13,10 +13,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Small Header */
+
 .small-header {
   display: flex;
   justify-content: space-between;
@@ -31,13 +31,13 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-/* Small Logo Styling */
+
 .small-header .logo {
   height: 40px;
   width: auto;
 }
 
-/* Menu Styling */
+
 .small-header .menu {
   display: none;
 }
@@ -54,7 +54,7 @@ body {
   color: #f4f4f4;
 }
 
-/* Burger Menu Styling */
+
 .small-header .burger {
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ body {
   border-radius: 2px;
 }
 
-/* Mobile Menu Visibility */
+
 .menu.active {
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ body {
   z-index: 100;
 }
 
-/* Desktop View: Show Menu */
+
 @media (min-width: 768px) {
   .small-header .menu {
     display: flex;
@@ -95,7 +95,7 @@ body {
   }
 }
 
-/* Main  Header */
+
 .main-header {
   width: 100%;
   min-height: 100vh;
@@ -124,7 +124,7 @@ body {
   font-weight: bold;
 }
 
-/* Scrollable Transparent Box */
+
 .scrollable-box {
   padding: 50px 20px;
   background: rgba(255, 255, 255, 0.6); /* Semi-transparent box */
