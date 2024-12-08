@@ -1,11 +1,11 @@
-/* General */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body content */
+
 body {
   margin: 0;  
   padding: 0;  
@@ -16,7 +16,7 @@ body {
 }
 
 
-/* Define the class for the Kavoon font */
+
 .kavoon-regular {
   font-family: "Kavoon", serif;
   font-weight: 400;
@@ -25,17 +25,17 @@ body {
   text-transform: uppercase;
   background: linear-gradient(
   90deg,
-  #cfe8f5, /* Very Light Blue */
-  #d9f0f5, /* Pale Sky Blue */
-  #ffffff,  /* White */
-  #f0f9fc  /* Lightest Pastel Blue */
+  #cfe8f5, 
+  #d9f0f5, 
+  #ffffff,  
+  #f0f9fc  
 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* General Header Styling */
+
 .small-header {
   display: flex;
   justify-content: space-between;
@@ -46,14 +46,14 @@ body {
   z-index: 10;
 }
 
-/* Logo Styling */
+
 .small-header .logo {
   height: 40px; 
   width: auto;
   display: block;
 }
 
-/* Menu Styling */
+
 .small-header .menu {
   display: none; 
 }
@@ -70,7 +70,7 @@ body {
   color: #f4f4f4;
 }
 
-/* Burger Menu Styling */
+
 .small-header .burger {
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@ body {
   border-radius: 2px;
 }
 
-/* Menu Visibility for Mobile */
+
 .menu.active {
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ body {
   z-index: 100; 
 }
 
-/* Desktop View: Show Menu */
+
 @media (min-width: 768px) {
   .small-header .menu {
     display: flex; /* Show the menu */
@@ -110,7 +110,7 @@ body {
     display: none; /* Hide burger on desktop */
   }
 }
-/* Show the menu when burger is clicked in mobile */
+
 .menu.active {
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ body {
   border-radius: 8px;
 }
 
-/* Header Section */
+
 header {
   width: 100%;
   height: 100vh;
@@ -202,7 +202,7 @@ header {
   color: #C9E6F0;
 }
 
-/* Carousel and Sidebar */
+
 .carousel-sidebar-container {
   display: flex;
   gap: 20px;
@@ -234,17 +234,17 @@ header {
   border-radius: 10px;
 }
 
-/* Slide 1 background */
+
 .slide:nth-child(1) {
   background-image: url('https://imgur.com/6zd7ALg.jpg'); 
 }
 
-/* Slide 2 background */
+
 .slide:nth-child(2) {
   background-image: url('https://imgur.com/iVvX30L.jpg'); 
 }
 
-/* Slide 3 background */
+
 .slide:nth-child(3) {
   background-image: url('https://imgur.com/PHKWQIp.jpg'); 
 }
@@ -278,7 +278,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Description Box */
+
 .description {
   display: flex;
   justify-content: center;
@@ -295,7 +295,7 @@ header {
   width: 100%;
 }
 
-/* Flip Cards */
+
 .card-wrapper {
   display: flex;
   overflow-x: auto;
@@ -347,7 +347,7 @@ header {
   transform: rotateY(180deg);
 }
 
-/* Specific backgrounds for each card */
+
 .flip-card:nth-child(1) .flip-card-front {
   background-image: url('https://imgur.com/5g7YtPR.jpg');
 }
@@ -360,32 +360,32 @@ header {
   background-image: url('https://imgur.com/5g7YtPR.jpg');
 }
 
-/* Footer Background */
+
 footer {
   background-color: #7BD3EA;
   color: white;
   text-align: center;
   padding: 20px 0;
 }
-/* Laptop View: Specific Styling */
+
 @media (min-width: 1024px) {
   .small-header {
-    padding: 20px 40px; /* Increase header padding for larger screens */
+    padding: 20px 40px; 
   }
 
   .cta {
-    padding: 60px 40px; /* More padding for the call-to-action section */
+    padding: 60px 40px; 
   }
 
   .description-box {
-    max-width: 900px; /* Increase max width for the description box */
+    max-width: 900px; 
   }
 
   .card-wrapper {
-    gap: 40px; /* Wider spacing between cards */
+    gap: 40px; 
   }
 
   .flip-card {
-    max-width: 400px; /* Increase card size for better visibility */
+    max-width: 400px; 
   }
   }
