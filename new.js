@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 5000);
 });
 
-// Function to handle the flip and redirection
+
 document.addEventListener("DOMContentLoaded", () => {
   const flipCards = document.querySelectorAll(".flip-card");
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Flip the clicked card
+      
       const innerCard = card.querySelector(".flip-card-inner");
       if (innerCard.style.transform === "rotateY(180deg)") {
         innerCard.style.transform = ""; 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("click", () => {
       const innerCard = card.querySelector(".flip-card-inner");
 
-      // If the card is flipped, redirect to the URL
+      
       if (innerCard.style.transform === "rotateY(180deg)") {
         window.location.href = card.dataset.url;  
       } else {
