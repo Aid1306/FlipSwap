@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Flip the clicked card
       const innerCard = card.querySelector(".flip-card-inner");
       if (innerCard.style.transform === "rotateY(180deg)") {
-        innerCard.style.transform = ""; // Unflip if already flipped
+        innerCard.style.transform = ""; 
       } else {
         innerCard.style.transform = "rotateY(180deg)";
       }
@@ -47,16 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to handle the flip and redirection
+ 
 function handleCardClick(card, link) {
   const cardInner = card.querySelector('.flip-card-inner');
   
-  // Check if the card is flipped
+  
   if (cardInner.style.transform === 'rotateY(180deg)') {
-    // If already flipped, redirect to the link
+    
     window.location.href = link;
   } else {
-    // Flip the card
+    
     cardInner.style.transform = 'rotateY(180deg)';
   }
 }
@@ -70,16 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // If the card is flipped, redirect to the URL
       if (innerCard.style.transform === "rotateY(180deg)") {
-        window.location.href = card.dataset.url; // Redirect to the link in data-url
+        window.location.href = card.dataset.url;  
       } else {
-        // Reset all cards
+        
         flipCards.forEach((otherCard) => {
           if (otherCard !== card) {
             otherCard.querySelector(".flip-card-inner").style.transform = "";
           }
         });
 
-        // Flip the clicked card
+        
         innerCard.style.transform = "rotateY(180deg)";
       }
     });
@@ -88,6 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleMenu() {
   const menu = document.querySelector('.menu');
-  menu.classList.toggle('active'); // Toggle the visibility of the menu
+  menu.classList.toggle('active'); 
 }
 
